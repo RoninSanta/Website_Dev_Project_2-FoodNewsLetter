@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name = "keywords" contents="Food Newsletter,Healthy Eating,Cook Well Eat Right Club ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Newsletter for Cooking Club</title>
+        <link rel ="stylesheet" href="StyleSheet/style.css"type="text/css">
+    </head>
+    <body>
+        
+        <!--          Navigation Header Section -------->
+        <nav>
+            <div class="socialmedia_icons">
+                <a href="#"><img src="icons/facebook.svg"></a> 
+                <a href="#"><img src="icons/instagram.svg"></a>
+                <a href="#"><img src="icons/twitter.svg"></a>
+                <a href="#"><img src="icons/youtube.svg"></a>
+                <!---- Royalty Free Icons from https://www.vecteezy.com/vector-art/95039-free-social-media-icons ---->
+            </div>
+            <div class="Club_Name">
+                <a href="index.html"> <h1>Cook Well,Eat Right <span class="highlight">Club</span></h1></a></div>
+            <div class="nav_bar">
+                <a href="index.html">Home Page</a>
+                <a href="menu.html">Today's Menu</a>
+                <a href="nutrition.html">Nutrition</a>
+                <a href="about.html">About Us</a>
+                <a href="report.html">Report</a>
+            </div>
+        </nav>
+             <!--       Home SlideShow Starts-->
+        <div class="slide-container"> <!--This is a Slideshow-->
+           <!--=========I decided to use CSS Styling to create a image carousell instead of Javascript ============-->
+                    <span id = "slider-image-1"></span> 
+                    <span id = "slider-image-2"></span>        
+                    <span id = "slider-image-3"></span>
+                    <div class="image-container"> <!--Here I insert the pictures for the slideshow-->
+                        <img src="images/ChikenDon.jpg" height="500" width="800" class="slider-image">      <!--This is the Pictures in the carousell-->
+                        <img src="images/Feast.jpg" height="500" width="800" class="slider-image">
+                        <img src="images/TikaMasala.jpg"  height="500" width="800" class="slider-image"> 
+                    </div>
+                    <div class= "button-container"> <!--Buttons to navigate Slides-->
+                     <a href= "#slider-image-1" class ="slider-button"></a>
+                     <a href= "#slider-image-2" class ="slider-button"></a>                     
+                     <a href= "#slider-image-3" class ="slider-button"></a>
+                    </div>
+                </div>
+                <!-- ============ Featured Recipes========-->
+        <div class="sidebar">
+            <div class="Featured_Recipes">
+                <h2>Featured<span class="highlight">Recipes</span></h2>
+                   <div class="recipes">   <!--Here I classify the recipes / dish  by Recipe Class-->
+                        <div class="dish">
+                            <h6>Breakfast</h6>
+                            <h1>Chicken Ginger Porridge</h1>
+                            <p>Chicken porridge is simple comfort food at its best. Top this congee with sesame oil, no YouTiao required.</p>
+                        </div></div>
+                    <div class="recipes">
+                        <div class="dish">
+                            <h6>Lunch</h6>
+                            <h1>Spicy Chicken Lemak</h1>
+                            <p>Have a calorie -controlled, well-portioned dish of Spicy Chicken Lemak, with some good ‘ol Ayam Lemak Cili Padi</p>
+                        </div></div>
+                   <div class="recipes">
+                        <div class="dish">
+                            <h6>Dinner</h6>
+                            <h1>Classic Chicken Curry</h1>
+                            <p> Everywhere you go, you will find this type of chicken curry.Classic, Nostalgic, Can't go wrong</p>
+                        </div></div>
+                <div class="learn_more"><a href= "menu.html">Learn More>>></a></div>
+           </div>
+        </div>
+              <!-- ============== Latest News and Events===========-->
+           <div class="right_bar">
+               <div class="News">
+                   <h3>Latest <span class="highlight">News &amp; Events</span></h3>
+                      <div class="Date">         <!--Here I write the details of Events -->
+                          <h5>14 Feb</h5>
+                          <p>Love is in the air for tonight.Get the Valentine's Day dinner special recipe now for your significant other, made to feed two lovebirds. They say the stomach is a way to one's heart</p>
+                         </div>
+                      <div class="Date">
+                      <h5>12 Feb</h5>
+                      <p>Gong Xi Fa Cai ! Happy Lunar New Year! As we say goodbye to the year of the Rat and greet the upcoming year of the Ox, we have prepared some amazing ox based dishes inspired by our wonderful Chinese community.Check them out Now.</p>
+                   </div>
+                   <div class="Date">
+                      <h5>29 Jan</h5>
+                      <p>Kitchen Showdown! Its the Red Team vs the Blue Team in a epic culinary challenge to bring people together, each player will bring their best and determine who will bring home the prizes. With a mysterious guest Chef Judge.</p>
+                   </div>
+               
+                   <div class="poster">                <!--Subscribe Button to link to Subscribe.HTML -->
+                       <p>Subscribe to our newsletter and get our latest news &amp; updates right now on your inbox.</p>
+                       <input type="text" placeholder="Enter your email address here">
+                       <div class="subscribe_btn"> <a href="subscribe.html">Subscribe Now</a></div>
+                   </div>
+                   </div>
+              </div>
+        <!-- ===================== Category and Desciption Boxes ======================-->
+          <div class="categories">
+              <div class="card_category">
+                  <img src="images/Aboutus.jpg">        <!--About Us Category -->
+                   <div class="desc_category">
+                       <h2>About Us</h2>
+                        <p>Discover authentic asian recipes, we gather the latest trends across the world in one place in your kitchen. We believe food is the great unifier that connects us across cultures and generations. Learn how to cook your favourite dishes with us and we will guide you every step along the way.</p>
+                  </div>
+              </div>
+              <div class="card_category">
+                  <img src="images/TodaySpecial.jpg">  <!--Menu Category -->
+                   <div class="desc_category">
+                       <h2>Daily Specials</h2>
+                        <p>Food is all about delicious, simple and different. We are inspired to make your day special too by introducing different menus every day. Check out our menus to see what we have cooking in the oven. Healthy Eating is not about strict limitations it's about eating what is nutritional and delicious.</p>
+                  </div>
+              </div>
+              <div class="card_category">
+                  <img src="images/Nutrition.jpg">
+                   <div class="desc_category">       <!-- Nutrition Category -->
+                       <h2>Nutrition Made Easy</h2>
+                        <p>Who says Dieting is hard?There are plenty of diet-friendly choices when you take a second and check out our page. Find out what healthy Asian food you should eat or avoid when that belt is getting a little tight on the waist.</p>
+                  </div>
+              </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1366 @@
+/* The best viewing resoluing for the website is in 1515 x 755px resolution */
+
+
+/*============Import Font Styles=========*/
+/*This adds the font families in the CSS */
+/* The fonts Assets can be found in the fonts folder included*/
+
+@font-face{
+    font-family: Rabbit;
+    src: url(../fonts/Rabbit.otf);
+}
+@font-face{
+    font-family: Champagne;
+    src: url(../fonts/Champagne.ttf);
+}
+@font-face{
+    font-family: Lemonada-SemiBold;
+    src: url(../fonts/Lemonada-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: Couture;
+    src: url(../fonts/Couture.otf);
+}
+@font-face{
+    font-family: Vonique;
+    src: url(../fonts/Vonique.otf);
+}
+
+/* ===========General Style Settings=======*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+p{
+    font-family: Arial,Helvetica, sans-serif;
+}
+/* ===========This below creates the styling for the Navigation Bar =======*/
+nav{
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+    padding: 10px;
+}
+
+.Club_Name{
+    border-bottom: 2px solid #ddd;
+    margin: 0 auto;
+    width: 700px;
+}
+
+.Club_Name h1{
+    font-family: Rabbit;
+    font-size: 55px;
+    letter-spacing: 5px;
+    font-weight: normal;
+    text-align: center;
+}
+.highlight{
+    color: #fc9d03;
+}
+.bold{
+    font-weight: bold;
+}
+.socialmedia_icons img{
+    width: 20px;
+    margin: 5px;
+    opacity: 50%;
+}
+/* Opaque Effect when Mouse is on icons using hover*/
+.socialmedia_icons img:hover{
+    opacity: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav_bar{
+    position: relative;
+    text-align: center;
+    grid-column: 1/4;
+    width: 600px;
+    margin: 0 auto;
+}
+.nav_bar a{
+    display: block;
+    float: left;
+    padding: 15px;
+    width: 120px;
+    font-family: Arial,Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.nav_bar a:hover{
+    color: #fc9d03;
+    transition: color 0.3s ease-in-out;
+}
+/*========================================================*/
+/* ========== index HTML Stylings Start =========*/
+/*========================================================*/
+#home {
+  position: relative;
+}
+/*-----------Slide Show on the center -------*/
+
+.slide-container {
+  width: 800px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+ overflow: hidden;
+ text-align: center;
+}
+/*-----------This stores the images for the slide show and will move left by 2s when the button is clicked -------*/
+.image-container{
+    width:2400px;
+    height: 00px;
+    position: relative;
+    transition: left 2s;
+}
+.slider-image{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+
+}
+.button-container{
+    top: -20px;
+    position:relative;
+
+}  /*-----------This code below display the buttons used to control the slide show -------*/
+.slider-button{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: white;
+}  /*-----------the code below shows how subsequent image moves left by []px value, the 3rd image moves more -------*/
+#slider-image-1:target ~ .image-container{
+    left: 0px;
+}
+#slider-image-2:target ~ .image-container{
+    left: -800px;
+}
+#slider-image-3:target ~ .image-container{
+    left: -1600px;
+}
+/*===========SideBar Styles / Featured Recipes =====*/
+.sidebar{
+    width: 350px;
+}
+.sidebar div > h2{
+    margin: 30px 0px;
+/*    Import the font below*/
+    font-family: Rabbit;      
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+/*The display style is in grids that is in column of 350px*/
+.sidebar {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-gap: 40px40px;
+    width: 350px;
+    padding: 60px 0px;
+    max-width: 50%;
+    position: absolute;
+    top: 38%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.Featured_Recipes{
+    font-family: Arial,Helvetica, sans-serif;
+}
+.recipes{
+    display: flex;
+}
+.dish{
+    padding: 5px;
+}
+.dish h6{
+    color: #fc9d03;
+    margin: 5px 0px;
+    font-size: 13px;
+}
+.dish h1{
+    font-size: 24px;
+    font-family: Champagne;
+    letter-spacing: 3px;
+}
+.dish p{
+    font-size: 15px;
+    
+}
+/* Button that links to menu.HTML Styling*/
+.learn_more{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-family: Champagne;
+    font-weight: bold;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #fc9d03;
+    margin-top: 10px; 
+}
+/* Button will change when mouse is over it */
+.learn_more:hover{
+    background: #fff;
+    color: #fc9d03;
+    border: 3px solid #333;
+}
+/*====Latest News and Events/  RightBar Styling=====*/
+.right_bar{
+    width: 350px;
+}
+/*Import Font for the Header Title*/
+.right_bar div > h3{
+    margin: 20px 0px;
+    font-family: Rabbit;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+/*Right Bar Styling */
+
+/*- I used grid columns of 350 px with a padding of 60px
+  -  Using the transform: translateY(-47%); i managed to move the column to the RIGHT SIDE*/
+.right_bar {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-gap: 40px40px;
+    width: 350px;
+    padding: 60px 0px;
+    max-width: 50%;
+    position: absolute;
+    top: 38%;
+    right: 0%;
+    transform: translateY(-47%);
+    box-sizing: border-box;
+    
+}
+.News{
+    font-family: Arial,Helvetica, sans-serif;
+}
+
+.Date{
+    padding: 5px;
+}
+.Date h5{
+    font-family: Champagne;
+    color: red;
+    font-size: 18px;
+}
+
+.Date p{
+    font-family: Arial,Helvetica, sans-serif;
+    font-size: 14px;
+}
+.poster p{
+    font-family: Lemonada-SemiBold;
+    width: 90%;
+    line-height: 25px;
+    margin-bottom: 10px;
+
+}
+.poster input{
+    width: 60%;
+    padding: 5px;
+    border: 2px solid #333;
+}
+/*Placeholder for the subscribe btn and link to subscibe HTML*/
+::placeholder{
+    font-family: Arial, Helvetica,sans-serif;
+}
+
+.subscribe_btn {
+    padding: 8px;
+    width: 120px;
+    border: 3px solid #fc9d03;
+    font-family: Champagne;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 10 auto;
+}
+/*Hover funtion such that the colour changes when mouse is on the btn*/
+.subscribe_btn:hover{
+    background-color: #fc9d03;
+    border: 3px solid #333;
+}
+
+/*-------- Categories and Desc. Style Section --------*/
+.categories{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-column-gap: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.card_category{
+    position: relative;
+    box-sizing: border-box;
+    left: -10px;
+    top: 10px;
+}
+/* -border-radius: 50% creates the circular cut out on the imgs 
+   - Height and width determine the size of the image around 200px*/
+.card_category img{
+    position: absolute;
+    box-shadow: 2px 2px 10px -2px #333;
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    left: 33px;
+    top: 13px;
+}
+/*- The Decription Box is a small box with a 5px orange border text-aligned to center */
+.desc_category{
+    padding: 0px 20px 10px;
+    height: 240px;
+    margin-top: 200px;
+    text-align: center;
+    border: 5px solid #fc9d03;
+    box-shadow: 2px 2px 5px -3px #333;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.desc_category h2{
+    margin: 10px 0px;
+    color: #333;
+    font-family: Couture;
+}
+/*========================================================*/
+/* ========== index HTML Stylings END =========*/
+/*========================================================*/
+
+
+/*========================================================*/
+/* ========== About Us HTML Stylings Start =========*/
+/*========================================================*/
+/*  The Background image that covers the entire page */
+.BackGroundImg{
+   padding: 20em;
+   background-image: url(../images/BackGround1.jpg);
+   background-size: cover;
+   height: 800px;
+   width: 1000px;
+}
+.about_section img{
+    max-width: 500px;
+    max-height: 600px;
+}
+
+.about_section{
+    max-height: 750px;
+}
+
+.Story{
+    max-width: 800px;
+    padding: 10px;
+    width: 55%;
+    position: relative;
+    top: -1400px;
+    left: 50%;
+    box-sizing: border-box;
+    border: 5px solid white;
+    color: white;
+}
+/*The row containers are used to represent the images and used the Y Tranform function to control it on the Y axis*/
+.row {
+    position: absolute;
+    transform: translateY(-1400px);
+    right: 60%;
+    
+}
+.about_section div>h4{
+    font-family: Couture;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+.about_section p{
+    font-family: Lemonada-SemiBold;
+    font-size: 15px;
+}
+.row2{ 
+    position: absolute;
+    right: -3%;
+    transform: translateY(-250%);
+}
+/*The Healthy details are displayed on the left side using transform function*/
+.Healthy{
+    max-width: 800px;
+    width: 55%;
+    box-sizing: border-box;
+    border: 5px solid white;
+    color: white;
+    padding: 10px;
+    transform: translateY(-450%);
+    font-size: 20px;
+}
+.Healthy h5{
+    font-family: Couture;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+.row3{
+    position: absolute;
+    right: 30%;
+    transform: translateY(-250%);
+    max-height: 400px;
+}
+/*The StartNow details are displayed on the left side using transform function*/
+.Start_Now {
+    position: relative;
+    padding: 10px;
+    left: 700px;
+    max-width: 1000px;
+    width: 80%;
+    transform: translateY(-100%);
+    box-sizing: border-box;
+    border: 5px solid white;
+    color: white;
+}
+.Start_Now h6{
+    font-family: Couture;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+/*=======The Subscribe button Stylling=====*/
+.about_sub{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-family: Champagne;
+    font-weight: bold;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    border: 2px solid orange;
+    margin-top: 10px; 
+}
+/*Hover Effect As the button colour changes when  mouse is on it*/
+.about_sub:hover{
+    background: #fff;
+    color: orange;
+    border: none;
+}
+/*========================================================*/
+/* ========== About Us HTML Stylings END =========*/
+/*========================================================*/
+
+
+/*========================================================*/
+/* ========== Menu HTML Stylings Start =========*/
+/*========================================================*/
+/*=======Menu HTML Stlying========*/
+/*This is the hardest webpage to code as it requires a lot of trial and error with a lot of patience
+  - The idea for the page comes from a YouTube tutorial detailed in my report, it is very complex and required a lot of testing and fixes but i finally managed to get the menu page to look just right*/
+.food{
+    padding: 20px;
+}
+.food-container{
+    max-width: 90vw;
+    margin: 0 auto;
+}
+.Special{
+    font-family: Rabbit;
+    font-size: 55px;
+    position: relative;
+    left: 80px;
+}
+/*- The border-radius curves the edges such that the images looks more aesthetic & the backgound colour behind the image make it looks better*/
+/*This part controls the layout of the food cards using the postion: relative and margin 20px we can create a horizontal layout of the cards and it will adjust to the screen size as long as the distance for each card is 20px*/
+.food-card{
+    position: relative;
+    background: linear-gradient(rgba(205,96,0,0.7),rgba(205,96,0,0.7));
+    margin: 20px 0;
+    color: #000;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 16px;
+    border: 1px solid orange;
+    box-shadow: 2px 3px 1px 1px #cd6100;
+    
+}
+.food-img{
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    transition: transform 4s;
+}
+.img-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity: 4s;
+}
+.img-text h1{
+    font-family: Rabbit;
+    font-size: 70px;
+    color: white;
+}
+.img-text h1{
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+.food-card:hover img{
+    opacity: 0.4;
+    transform: scale(1.3);
+}
+/*This will trigger the Zoom effect on the images when the mouse is hovering on the pictures 
+ - This triggers the Text font and dims the opacity of the image  by 0.4 and transform: scale(1.3) Zoom scale of 1.3
+- Check Img Text .food-card:hover img for the code */
+.food-card:hover .img-text,
+.food-card:hover .img-footer{
+    opacity: 1;
+}
+    @media screen and (min-width: 700px){
+    .food-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 16px;
+        height:330px;
+    }
+}
+/*This creates a container for images restricted to 800px and repeats by column using the grid-template-columns: repeat function
+  - the grid gap determines the gap between each image
+   - This is what aligns the 3 images with a height of 330px */
+@media screen and (min-width: 800px){
+    .food-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 16px;
+        height: 330px;
+    }
+}
+
+/*=========Featured Menu Grids Styling========*/
+.Recipes{
+    font-family: Rabbit;
+    font-size: 55px;
+    position: relative;
+    left: 80px;
+}
+/*This creates the grid pattern with the first picture of 50% size and 25% every subsequent image*/
+.cover{
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 300px 300px;
+    grid-gap: 5px 5px;
+    width: 1400px;
+    margin: 0 auto;
+}
+.feature{
+    position: relative;
+}
+.feature img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title_filter{
+    position: absolute;
+    bottom: 0;
+    background-color: #333;
+    opacity: 50%;
+    width: 100%;
+    height: 22%;
+}
+.feature_title{
+    position: absolute;
+    font-family: Couture;
+    letter-spacing: 2px;
+    bottom: 0;
+    margin: 5px 10px;
+    color: #fff;
+}
+/*This adds the date on the corner of each image contained inside a orange box for aesthetic design */
+.date{
+    position: relative;
+    width: 60px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+    background-color: #fc9d03;
+    padding: 10px 0px;
+}
+.date h3{
+    line-height: 25px;
+}
+.date span{
+    color: #222;
+    display: block;
+}
+.feature_title h1{
+    font-size: 28px;
+}
+/*-----The following codes determine the layout of the pictures in a nested pattern--------- */
+.cover .feature:nth-child(1){
+    grid-row: 1/3;
+}
+.cover .feature:nth-child(4){
+    grid-row: 1/3;
+    grid-column: 3/4;
+}
+.cover .feature:nth-child(3) h1,.cover .feature:nth-child(2) h1{
+    font-size: 15px;
+}
+.cover .feature:nth-child(3) p,.cover .feature:nth-child(2) p{
+    font-size: 8px;
+}
+.cover .feature:nth-child(3) date,.cover .feature:nth-child(2) p{
+    font-size: 16px;
+    width: 50px;
+    padding: 2px 0px;
+    margin-bottom: 5px;
+}
+.cover .feature:nth-child(4) .title_filter{
+    height: 25%;
+}
+.cover .feature:nth-child(4) h1{
+    font-size: 20px;
+}
+/*========================================================*/
+/* ========== Menu HTML Stylings END =========*/
+/*========================================================*/
+
+
+/*========================================================*/
+/* ========== Nutrition HTML Stylings Start =========*/
+/*========================================================*/
+/*  ========== BANNER Area Start=====*/
+.banner-area{
+    width: 100%;
+    height: 400px;
+    top: 100px;
+    position: fixed;
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+/*    background image is loyalty free from:https://www.vecteezy.com/vector-art/624752-cute-food-pattern-background-kawaii-cartoons*/   
+}
+.banner-area h2{
+    position: absolute;
+    font-family: Rabbit;
+    font-size: 70px;
+    letter-spacing: 5px;
+    font-weight: normal;;
+    text-align: center;
+    width: 800px;
+    border: 8px solid black;
+    left: 30%;
+    top: 30%;
+}
+/*The content area container with an grey background will move according the scoll and covers the banner picture as the position is Relative but the banner position is absolute that means the banner will stay in position regardless of scroll*/
+.content-area{
+    position: relative;
+    width: 100%;
+    top: 350px;
+    background: #ddd;
+    text-align: center;
+    height: 100%;
+}
+.content-area h2{
+    font-family: Champagne;
+    letter-spacing: 4px;
+    padding-top: 20px;
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.content-area p{
+    position: relative;
+    left: 20%;
+    width: 1000px;
+    padding: 2%;
+    border: 5px solid #fff;
+    box-shadow: 2px 2px 5px -3px #333;
+    box-sizing: border-box;
+    font-family: Lemonada-SemiBold;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+/*=========Food Tips and Nutrition===========*/
+
+.tips_tricks{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+/*This helps to align the tip texts in rows automatically */
+.tips_tricks:nth-child(5), .tips_tricks:nth-child(6){
+    border-bottom: 0;
+}
+.tips_tricks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tips_tricks img{
+    max-width: 380px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    padding 3px;
+}
+.tips_tricks h4{
+    font-family: Champagne;
+    font-size: 30px;
+    border-bottom: 1px dashed #333;
+    max-width: 300px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.tips_tricks p{
+    border: 5px solid #fc9d03;
+    box-shadow: 2px 2px 5px -3px #333;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: left;
+    left: 10px;
+}
+/*========================================================*/
+/* ========== Nutrition HTML Stylings End =========*/
+/*========================================================*/
+
+
+/*========================================================*/
+/* ========== Subscribe HTML Stylings Start =========*/
+/*========================================================*/
+.header{
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    
+}
+.header h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: red;
+    font-family: Champagne;
+}
+.header h4{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-family: Couture;
+    text-align: center;
+    color: #fff;
+}
+label{
+    color: #999;
+    font-family: Rabbit;
+    font-size: 40px;
+    display: inline-block;
+    font-weight: 400px;
+}
+.checkBoxHeader{
+    width: 100%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.Terms_condBox
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+.buttons{
+    position: relative;
+    max-width: 300px;
+    margin-top: 30px;
+    left: 35%;
+}
+/*========================================================*/
+/* ========== Subscribe HTML Stylings END =========*/
+/*========================================================*/
+
+
+/*========================================================*/
+/* ========== Report Stylings Start =========*/
+/*========================================================*/
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 60%;
+    border-bottom: 1px dashed #333;
+    padding: 20px;
+}
+.title ul{
+    display: inline-flex;
+    margin: 10px;
+    margin-left: -40px;
+}
+.title ul li{
+    list-style: none;
+    margin: 0 40px;
+}
+.Report{
+    padding: 23px;
+}
+.Report h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px; 
+}
+.Report p{
+    font-family: Times New Roman, sans-serif;
+    font-size: 17px
+}
+.Intro{
+    padding: 23px;
+}
+.Inspiration{
+    padding: 23px;
+}
+.Accesible{
+    padding: 23px;
+}
+.Usability{
+    padding: 23px;
+}
+.Learning{
+    padding: 23px;
+}
+.Worked_Well{
+    padding: 23px;
+}
+.Links h2{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+}
+.Links ul{
+    margin-left: 30px;
+    font-family: Times New Roman, sans-serif;
+    font-size: 18px
+}
+.Wireframe_title ul{
+    display: inline-flex;
+    margin: 10px;
+    margin-left:10px;
+}
+.Wireframe_title ul li{
+    list-style: none;
+    margin: 0 180px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    border-bottom: 3px solid black; 
+}
+.Index_frame h2{
+    font-family: Times New Roman, sans-serif;
+    font-size: 18px;
+    width: 15%;
+    border-bottom: 2px dashed #333;
+}
+.Index_frame ul{
+    display: inline-flex;
+    margin: 10px;
+    margin-left: -10px;
+}
+.Index_frame ul li{
+    list-style: none;
+    margin: 0 5px;
+}
+/*========================================================*/
+/* ========== Report HTML Stylings End =========*/
+/*========================================================*/
+
+/*========================================================*/
+/* ========== Responsive HTML Stylings Start =========*/
+/*========================================================*/
+/*This helps to create a responsive website that can be viewed normally on any platform*/
+/*It changes the font size and alignment of the texts to fit the display sizes of various devices*/
+
+/*-Using various media element control to limit the min/max width sizes*/
+/* - Using ADAVANCED LAYOUT such as display grid, grid template and FLEX to manipulate the layout when size is changed*/
+/*- The appropriate use of co-ordinates using the help of TranslateY and TranslateX , absolute and relative positions to change the coordinates of objects */
+/*- This MEDIA control allows for best viewing experience on desktop or Larger within a specific min/max width*/
+
+/* For The best Viewing Experience view it in 1515 x 755 px resolution */
+
+/*---------Desktop Display or Larger--------------*/
+@media only screen and (min-width:1511px){
+/*----- Index Html Response for Desktop or Larger----*/
+    .right_bar{
+        left: 1190px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sidebar{
+        margin-left: auto;
+        right:76%;
+    }
+    .categories{
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+    /*----- Menu Html Response is not required for Desktop display as the display: grid , grid-template-columns: repeat will help me organize the display to auto layout the grids to fit the screen  grid-template-columns function will repeat the grids to fit the screen with w/ a margin: 20px in between----*/
+    
+    /*    Nutrition HTML Desktop Response Or Larger*/
+    .content-area{
+        width: 100%;
+        height: auto;
+    }
+    .content_area p{
+        text-align: center;
+        width: 100%;
+    }
+    .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 100%;
+    }
+    .tips_tricks p{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    /*----- Subscribe Html Response is not required for Desktop display as the there is only 1 column to display and align-items: center will align it to the center at all times. So the content details will always be centered regardless of screen size.----*/
+    
+    /*    About US HTML Desktop Response Or Larger*/
+    .about_section{
+        max-width: 1500px;
+    }
+    .Story{
+        top: -1600px;
+        left: 40%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .row{
+        position: relative;
+        left: 5%;
+        transform: translateY(-1300px);
+    }
+    .row2{
+        position: relative;
+        left: 60%;
+        transform: translateY(-1500px);
+    }
+    .row3{
+        position: relative;
+        left: 2%;
+        transform: translateY(-1800px);
+    }
+    .Healthy{
+        position: relative;
+        left: 5%;
+        transform: translateY(-1900px);
+    }
+    .Start_Now {
+        position: relative;
+        left: 36%;
+        transform: translateY(-300px);}
+}
+/*---------Tablet Display or Larger--------------*/
+/*------This will show how the website will dynamically change when the screen width is between 601px and 1510px---------*/
+
+@media only screen and (min-width:601px) and (max-width: 1510px){
+/*    Index HTML for Tablet response*/
+    nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .Club_Name
+    { width: 100%;}
+    .nav_bar
+    {
+    position:relative;
+    text-align: center;}
+    
+    .sidebar{
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transform: translateY(-13%);
+    left: 5%;
+    }
+    .right_bar{
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transform: translateY(-100%);
+    left: 60%;
+    }
+    
+    .subscribe_btn {
+       position: relative;
+        left: 30%;
+    }
+    
+    .categories{
+        display: flex;
+        flex-direction: column; 
+        max-height: 500px;
+        margin-left: 80px;
+       align-items: center;
+      transform: translateY(-60%);
+    }
+    .card_category{
+        margin: 30px;
+    }
+    .desc_category{
+     height: 100%;
+    }
+    .card_category img{
+        width: 250px;
+        height: 250px;
+        left: 37%;
+        transform: translateY(-25%);
+    }
+    
+    /*    Menu HTML for Tablet response*/
+    .food-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .cover{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    /*    Nutrition HTML Tablet Response*/
+    @media only screen and (min-width:601px) and (max-width: 1510px){
+        .banner-area{
+        width: 100%;
+        height: 1000px;
+        top: 26%;
+        position: fixed;
+        background-size: cover;
+    }
+        .banner-area h2{
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        transform: translateY(-70%);
+    }
+    .content-area{
+        width: 100%;
+        margin-top: 100px;
+    }
+    .tips_tricks h4{
+        text-align: center;
+        font-size: 50px;
+        max-width: 400px;
+        }
+    .content-area h2{
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+    }
+    .content-area p{
+        display: flex;
+        max-width: 1800px;
+         width: 80%;
+        text-align: center;
+        left: 10%; 
+    }
+ }
+    /*-----About Us HTML Tablet Response---*/
+    /* ---Resizes the images to fit average displays*/
+   .about_section img{
+    max-width: 600px;
+    max-height: 650px;
+    }
+    .about_section {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 1080px;
+    }
+    .BackGroundImg{
+      display: grid;
+      width:  1800px;
+      height: 1800px;
+    }
+    .row{
+        position: relative;
+        transform: translateY(-2300px);
+        left: 20%;
+    }
+    .row2{
+        position: relative;
+        transform: translateY(-2350px);
+        left: 130%;
+    }
+    .row3{
+        position: relative;
+        transform: translateY(-2250px);
+        left: 50%;
+    }
+    /* ---Resize text boxes */
+    .Story{
+        position: relative;
+        left: 1050px;
+        max-width: 1000px;
+        width: 100%;
+        transform: translateY(-1150px);
+        box-sizing: border-box;
+    }
+    .Healthy{
+        position: relative;
+        left: 150px;
+        max-width: 1000px;
+        width: 100%;
+        transform: translateY(-2600px);
+    }
+    .Start_Now{
+        position: relative;
+        left: 800px;
+        width: 100%;
+    }
+   /*----Subscribe HTML Tablet Response*/
+    /*-------This changes the header font size to smaller fonts ----------*/
+    .header{
+      display: flex;
+     flex-direction: column;
+     width: 80%;
+    height: 600px;
+    
+   }
+.header h2{
+        text-align: center;
+        width: 100%;
+        font-size: 2em;
+  }
+.header h4{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-family: Couture;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    }
+    .Terms_condBox{
+        font-size: 1em;
+    }
+}
+/*This MEDIA control allows for best viewing experience on mobile users*/
+/*---------Mobile Display--------------*/
+/*------This will show how the website will dynamically change when the screen width is 600px or less--------*/
+/*------This is when the FONT SIZES will change to smaller fonts in order to remain recognizable in small displays---------*/
+@media only screen and (max-width:600px) {
+    nav {
+        display: block;
+        grid-template-columns: 300px auto 300px;
+    }
+    .Club_Name
+    { width: 100%;}
+    .nav_bar
+    {width: 100%;}
+    .nav_bar a
+    { display: grid;
+        width: 100%;}
+    
+/*    index html */
+    .slide-container {
+        width: 100%;
+    }
+    .sidebar h1{
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+    }
+    .sidebar{
+    display: block;
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    transform: translateY(4%);
+    left: 20%;
+    }
+    .right_bar{
+    display: block;
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    transform: translateY(0%);
+    left: 20%;
+    }
+    .categories{
+        display: flex;
+        flex-direction: column;
+      align-items: center;
+      transform: translateY(0%);
+    }
+    .card_category{
+        margin: 30px;
+    }
+    .desc_category{
+        height: 100%;
+    }
+    .card_category img{
+        width: 250px;
+        height: 250px;
+        left: 20%;
+        transform: translateY(-20%);
+    }
+/*    menu html responses*/
+    .cover{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .Special{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+    }
+    .feature{
+      width: 100%;
+    }
+    
+    .featured{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .subscribe_btn {
+        position: relative;
+        text-align: center;
+        left: 35%;
+    }
+   
+/*     Nutrition html responses */
+    .banner-area{
+        width: 100%;
+        display: flex;
+        top: 60%;
+        position: absolute;
+    }
+    .banner-area h2{
+        max-width: 1800px;
+         width: 80%;
+        text-align: center;
+        left: 10%; 
+    }
+    .tips_tricks{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-area{
+        margin-top: 200px;
+        width: 100%;
+    }
+    .content-area h2{
+        font-size: 1.7em;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+    }
+    .content-area p{
+        max-width: 1800px;
+         width: 80%;
+        display: flex;
+        flex-direction: column;
+        left: 10%; 
+    }
+   /*    About US html responses */
+
+    .BackGroundImg{
+      display: grid;
+      max-width: 300px;
+      height: 800px;
+    }
+    .Story{
+        left: 90%;
+        width: 100%;
+        position: relative;
+        top: -1400px;
+    }
+    .Healthy{
+        width: 80%;
+        position: relative;
+        top: 1100px;
+    }
+    .Start_Now {
+         position: relative;
+        width: 80%;
+        left: 430px;
+        transform: translateY(-85%);
+    }
+    /* ---Resizes the images to fit small displays*/
+   .about_section img{
+    max-width: 400px;
+    max-height: 450px;
+    }
+    .row{
+        transform: translateY(-1340px);
+        position: absolute;
+        right: 20%;
+    }
+    .row2{
+       transform: translateY(-1370px);
+        position: absolute;
+        right: -70%;
+    }
+    .row3{
+        transform: translateY(-1350px);
+        position: absolute;
+        right: -20%;
+    }
+/*    Subscribe html response */
+/*    This changes the header font size to smaller fonts */
+    .header{
+      display: flex;
+     flex-direction: column;
+     width: 100%;
+    height: 600px;
+    
+   }
+.header h2{
+        text-align: center;
+        width: 100%;
+        font-size: 2em;
+  }
+.header h4{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-family: Couture;
+    text-align: center;
+    color: #fff;
+    font-size: 1.7em;
+    }
+ .Terms_condBox{
+        font-size: 0.9em;
+    }
+}

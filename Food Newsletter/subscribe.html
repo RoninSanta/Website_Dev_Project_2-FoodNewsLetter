@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name = "keywords" contents="Food Newsletter,Healthy Eating,Cook Well Eat Right Club ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Subscribe Now!</title>
+        <link rel ="stylesheet" href="StyleSheet/style.css"type="text/css">
+        
+    </head>
+    <body>
+        
+        <!--          Navigation Header Section -------->
+        <nav>
+            <div class="socialmedia_icons">
+                <a href="#"><img src="icons/facebook.svg"></a> 
+                <a href="#"><img src="icons/instagram.svg"></a>
+                <a href="#"><img src="icons/twitter.svg"></a>
+                <a href="#"><img src="icons/youtube.svg"></a>
+                <!---- Royalty Free Icons from https://www.vecteezy.com/vector-art/95039-free-social-media-icons ---->
+            </div>
+            <div class="Club_Name">
+                <a href="index.html"> <h1>Cook Well,Eat Right <span class="highlight">Club</span></h1></a>
+            </div>
+            <div class="subscribe_btn"> <a href="subscribe.html">Subscribe Now</a></div>
+            <div class="nav_bar">
+                <a href="index.html">Home Page</a>
+                <a href="menu.html">Today's Menu</a>
+                <a href="nutrition.html">Nutrition</a>
+                <a href="about.html">About Us</a>
+                <a href="report.html">Report</a>
+            </div>
+        </nav>  
+        <!--          Navigation Header Section End -------->
+            <!--         Subscribe Page Start-->
+        
+        <div class="header">
+            <h2>Get in Touch for the <span class="highlight">Latest Updates</span></h2>
+            <h4>Subscribe to our Newsletter</h4>
+            <div class="newsletter">
+                 
+                <!--The code cited in this form is an modified version from https://www.w3schools.com/howto/howto_js_dropdown.asp to fit my design-->
+                <p id="comboBoxHeader"><!-- ComboBox For the Title Desc.-->
+                  <label for="Title" class="floatLabel">Title:</label>&nbsp &nbsp<select name="Name_title" id="Name_title" >
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Miss</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Doctor">Dr</option>
+                        <option value="Madam">Mdm</option>
+                    
+                      </select>
+                    </p><br />
+                  <!-- Name Boxes Where the User fills in their Information and it will be saved and displayed in MessageBox when completed-->
+        <!--     The code cited here is a combination of Cousera tutorial and w3schools.com https://www.w3schools.com/howto/howto_css_register_form.asp-->
+                  <label for="Title" class="floatLabel">First Name:</label> &nbsp &nbsp &nbsp  &nbsp 
+                  <input type="text" id="FIRSTNAME" size="30"><br /><br />
+                  <label for="Title" class="floatLabel">Last Name:</label> &nbsp &nbsp  &nbsp  &nbsp 
+                  <input type="text" id="LASTNAME" size="30"><br /><br />
+                  <label for="Title" class="floatLabel">E-mail:</label>  &nbsp &nbsp  &nbsp  &nbsp  &nbsp 
+                <input type="text" id="EMAIL" placeholder="Enter Your e-mail address" size ="31">
+                <br /><br />
+                 <!-- Terms and Conditions CheckBox, The User needs to check ALL boxes in order to proceed-->
+                <div class="Terms_condBox">
+                    <p id="checkBoxHeader">To proceed please agree to the following rules and regulations:</p><br />
+              <input type="checkbox" name="term_cond" class="term_cond" value = "I have read and agree to the privacy policy,terms of use and community guidelines"> I have read and agree to the privacy policy,terms of use and community guidelines <br />
+
+              <input type="checkbox" name="term_cond" class="term_cond" value = "Keep me up to date with the news or latest events"> Keep me up to date with the news or latest events <br />
+
+              <input type="checkbox" name="term_cond" class="term_cond" value = "I agree to the website to share my registration data for marketing purposes"> I agree to the website to share my registration data for marketing purposes<br />
+                </div>
+            </div>
+        </div>
+          <!--  The Buttons Submits the Info/ Resets the page -->
+        <div class="buttons">
+        <button onClick="checkFormData()"> Submit</button>
+        <button onClick="resetFormData()"> Reset</button>
+        </div>
+    <script src="Javascripts/sign_up.js"> </script>
+    </body>
+        
