@@ -33,7 +33,18 @@ A food news letter website I created that promotes healthy eating, with simple r
 ### [SUBSCRIBE  Page]
 - A Page that can allow users to sign up to our newsletter
 - The user have to fill in a VALID name and email address and will recevive a confirmation pop-up message
-- The email is check with regular expression to match if the email is a valid address.
-     pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-    required
+- The email is check with regular expression to match if the email is a valid address. The below function is found in the `Javascript Folder`
+``` 
+// Using the following expressions we can exclude any invalid expressions to the email letters; example removing any ^&*()symbols while requring a @ symbol for emails
+function isValidEmailFormat (value) 
+{
+ //Regular Expression Pattern example found in W3resource.com
+//www.w3resource.com/javascript/form/email-validation.php
+ var regularExpression = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+ if (regularExpression.test(value))
+    return (true)
+ else
+    return (false)
+}
+```
 - The Name Fill Box is also check to ensure that no symbols are being added into the name space
